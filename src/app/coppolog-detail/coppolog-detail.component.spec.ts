@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CoppoLogComponent } from './coppo-log.component';
+import { CoppologDetailComponent } from './coppolog-detail.component';
 
-describe('CoppoLogComponent', () => {
-  let component: CoppoLogComponent;
-  let fixture: ComponentFixture<CoppoLogComponent>;
+describe('CoppologDetailComponent', () => {
+  let component: CoppologDetailComponent;
+  let fixture: ComponentFixture<CoppologDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CoppoLogComponent ]
+      declarations: [ CoppologDetailComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CoppoLogComponent);
+    fixture = TestBed.createComponent(CoppologDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

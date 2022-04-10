@@ -4,20 +4,20 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { CoppoLogComponent } from './coppo-log/coppo-log.component';
+import { CoppologDetailComponent } from './coppolog-detail/coppolog-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CoppoLogComponent
+    CoppologDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
-      {path: 'coppolog', component:CoppoLogComponent}
+      {path: 'coppolog', component:CoppologDetailComponent}
     ])
   ],
   providers: [],

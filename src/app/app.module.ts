@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CoppologDetailComponent } from './coppolog-detail/coppolog-detail.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { CoppologDetailComponent } from './coppolog-detail/coppolog-detail.compo
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent},

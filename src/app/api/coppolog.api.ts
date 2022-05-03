@@ -1,5 +1,6 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
+import {CoppoLog} from "../interfaces/CoppoLog";
 
 @Injectable()
 export class CoppologApi {
@@ -12,5 +13,9 @@ export class CoppologApi {
   // Returns a log based on the given Id.
   GetCoppoLogById(id: number){
     return null;
+  }
+
+  GetAll(){
+    return this.http.get<CoppoLog[]>(this.coppoUrl);
   }
 }

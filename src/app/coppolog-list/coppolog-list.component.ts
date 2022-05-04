@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {coppologs} from "../coppologs";
 
 @Component({
   selector: 'app-coppolog-list',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./coppolog-list.component.css']
 })
 export class CoppologListComponent implements OnInit {
+
+  coppologs = coppologs;
 
   constructor() { }
 

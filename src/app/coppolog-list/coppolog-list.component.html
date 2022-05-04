@@ -1,0 +1,14 @@
+<p>List of log in coppo application</p>
+
+<table>
+  <thead>
+    <td>Message</td>
+    <td>Level</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let coppolog of coppologs">
+      <td>{{coppolog.message}}</td>
+      <td>{{coppolog.level}}</td>
+    </tr>
+  </tbody>
+</table>

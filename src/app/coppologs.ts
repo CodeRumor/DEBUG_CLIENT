@@ -1,4 +1,4 @@
-export const coppologs = [
+﻿export const coppologs = [
   {
     id: 1,
     message: "Storing keys in a directory '\"/root/.aspnet/DataProtection-Keys\"' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.",

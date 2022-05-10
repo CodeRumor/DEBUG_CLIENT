@@ -1,21 +1,21 @@
 ﻿import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {CoppoLog} from "../interfaces/coppoLog";
+import {Observable, throwError} from "rxjs";
 
-@Injectable()
+@Injectable({
+  providedIn: "root"
+})
+
 export class CoppologApi {
+
+  private API: string = "http://localhost:8070/CoppoLogs?count=10";
+
   constructor(private http: HttpClient) {
   }
 
-  // The url for the api that returns log based on an id.
-  coppoUrl = "";
-
-  // Returns a log based on the given Id.
-  GetCoppoLogById(id: number){
-    return null;
+  getCoppoLogs(): Observable<CoppoLog[]> {
+    return this.http.get<CoppoLog[]>(this.API);
   }
 
-  GetAll(){
-    return this.http.get<CoppoLog[]>(this.coppoUrl);
-  }
 }

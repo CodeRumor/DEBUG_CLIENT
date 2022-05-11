@@ -1,17 +1,21 @@
-﻿# Stage 1
-FROM node:alpine
-WORKDIR '/app'
-EXPOSE 4030
+# pull official base image
+FROM node:13.12.0-alpine
 
-# Install the latest version of angular client
-# Install of the dependecies from package.json file.
-RUN npm install -g @angular/cli@latest
-COPY package.json .
-RUN npm install
-COPY . .
+# set working directory
+WORKDIR /app
+EXPOSE 4001
 
-# running the application using ng serve
-# specify the alocated IP address for the application in this case
-# specify the port for the application.
-# The values shown below should much values in docker compose.
-CMD ng serve --host 172.18.0.10 --port 4030
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
+# install app dependencies
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install --silent
+RUN npm install react-scripts@3.4.1 -g --silent
+
+# add app
+COPY . ./
+
+# start app
+CMD ["npm", "start"]

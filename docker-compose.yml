@@ -1,15 +1,18 @@
-﻿version: "3.3"
+version: "3.7"
 services:
   web-app:
-    container_name: "debug_client"
+    container_name: "debug-client"
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
     ports:
-      - "4030:4030"
+      - "4001:3000"
     networks:
       default:
-        ipv4_address:  172.18.0.10
+        ipv4_address:  172.18.0.12
     restart: always
 
 networks:

@@ -4,7 +4,7 @@ const UsingFetch = () => {
     const [coppologs, setCoppologs] = useState([])
 
     const fetchData = () => {
-        fetch("http://localhost:8070/CoppoLogs?count=5000")
+        fetch("http://localhost:8070/CoppoLogs?count=10")
             .then(response => {
                 return response.json()
             })

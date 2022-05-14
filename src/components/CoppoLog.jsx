@@ -1,15 +1,15 @@
 ﻿import React, { useEffect, useState } from "react"
 
 const UsingFetch = () => {
-    const [coppologs, setCoppologs] = useState([])
+    const [coppoLogs, setCoppoLogs] = useState([])
 
     const fetchData = () => {
-        fetch("http://localhost:8070/CoppoLogs?count=10")
+        fetch("http://localhost:8070/coppoLogs?count=10")
             .then(response => {
                 return response.json()
             })
             .then(data => {
-                setCoppologs(data)
+                setCoppoLogs(data)
             })
     }
 
@@ -29,15 +29,15 @@ const UsingFetch = () => {
                         <th>Expection</th>
                     </tr>
                 </thead>
-                { coppologs.length > 0 && (
+                { coppoLogs.length > 0 && (
                     <tbody>
-                        {coppologs.map(coppologs => (
+                        {coppoLogs.map(coppoLogs => (
                             <tr>
-                                <td>{coppologs.id}</td>
-                                <td>{coppologs.message}</td>
-                                <td>{coppologs.level}</td>
-                                <td>{coppologs.timeStamp}</td>
-                                <td>{coppologs.exception}</td>
+                                <td>{coppoLogs.id}</td>
+                                <td>{coppoLogs.message}</td>
+                                <td>{coppoLogs.level}</td>
+                                <td>{coppoLogs.timeStamp}</td>
+                                <td>{coppoLogs.exception}</td>
                             </tr>
                            
                         ))}

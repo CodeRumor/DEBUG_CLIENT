@@ -1,16 +1,18 @@
-# Getting Started with Create React App
+# Getting Started with Debug App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
  # Step 1
  Install the needed micros-services. These micro-services provide the information needed by this 
  applications. This list below shows gitHub repos were you can find the needed micro-services.
-- [Debug api micros-service](https://github.com/CodeRumor/DEBUG_API).
+- [Debug api service](https://github.com/CodeRumor/DEBUG_API).
+- [MSSQL services](https://github.com/ugolole/MSSQL)
 
 
 ## Available Scripts
 
-In the project directory, you can run the following scripts only after the microservices have been installed.:
+In the project directory, you can run the following scripts only after the microservices have been installed
+using the commands shown below.
 
 ### `docker-compose up --build -d`
 Runs the app in a container in the docker environment if one has been 

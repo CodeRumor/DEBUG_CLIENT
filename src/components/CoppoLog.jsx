@@ -4,13 +4,16 @@ const UsingFetch = () => {
     const [coppoLogs, setCoppoLogs] = useState([])
 
     const fetchData = () => {
-        fetch("http://localhost:8070/coppoLogs?count=10")
-            .then(response => {
-                return response.json()
+        fetch("http://localhost:8070/coppoLogs?count=10", {
+            method : 'GET',
+            headers : new Headers({
+                'Content-Type': 'application/x-www-form-urlencoded'
             })
-            .then(data => {
-                setCoppoLogs(data)
-            })
+        }).then(response => {
+            return response.json()
+        }).then(data => {
+            setCoppoLogs(data)
+        });
     }
 
     useEffect(() => {

@@ -21,7 +21,7 @@ const UsingFetch = () => {
     }, [])
 
     return (
-        <div class="centered">
+        <div className="centered">
             <table>
                 <thead>
                     <tr>
@@ -35,7 +35,7 @@ const UsingFetch = () => {
                 { coppoLogs.length > 0 && (
                     <tbody>
                         {coppoLogs.map(coppoLogs => (
-                            <tr>
+                            <tr key={coppoLogs.id}>
                                 <td>{coppoLogs.id}</td>
                                 <td>{coppoLogs.message}</td>
                                 <td>{coppoLogs.level}</td>

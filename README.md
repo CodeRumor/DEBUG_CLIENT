@@ -20,7 +20,7 @@ set up.
 Open [http://localhost:4001](http://localhost:4001) to view the application running
 in your browser.
 
-### `npm start`
+### `npm run start:dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.

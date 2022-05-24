@@ -9,7 +9,7 @@ services:
       - '.:/app'
       - '/app/node_modules'
     ports:
-      - "4001:3000"
+      - "4001:4001"
     networks:
       default:
         ipv4_address:  172.18.0.12
